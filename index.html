@@ -6,7 +6,7 @@
   </head>
   <body>
     
-    <iframe src="https://html-engine-dev1.dynamicyield.com/ap/M4XgHA7GCcYCwGYDcBjEBGADBArOuAbEgC4bZ5w5A/Untitled-landing-pages" id="myIframe" title="test utm source" loading="lazy" style="width:100vw;height:100vh;border:none;"></iframe>
+    <iframe id="myIframe" title="test utm source" loading="lazy" style="width:100vw;height:100vh;border:none;"></iframe>
 
 <script>
   // Immediately invoked function to set the iframe source URL with query parameters
@@ -14,9 +14,6 @@
     const currentUrl = window.location.href; // Get the current page URL
     const params = new URLSearchParams(window.location.search); // Get existing query parameters
 
-    console.log('currentUrl',currentUrl);
-    console.log('params',params.toString());
-    
     // Add or update the 'currentPageUrl' parameter
     params.set('currentPageUrl', encodeURIComponent(currentUrl));
     
@@ -24,7 +21,7 @@
     const iframeSrc = `https://html-engine-dev1.dynamicyield.com/ap/M4XgHA7GCcYCwGYDcBjEBGADBArOuAbEgC4bZ5w5A/Untitled-landing-pages?${params.toString()}`;
     
     // Set the src attribute of the iframe
-    // document.getElementById('myIframe').src = iframeSrc;
+    document.getElementById('myIframe').src = iframeSrc;
   })();
 </script>
 
