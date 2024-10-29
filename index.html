@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    
-    <iframe src="https://html-engine-dev1.dynamicyield.com/ap/M4XgHA7GCcYCwGYDcBjEBGADBArOuAbEgC4bZ5w5A/Untitled-landing-pages" id="myIframe" title="test utm source" loading="lazy" style="width:100vw;height:100vh;border:none;">
-      <script>
-  // Immediately invoked function to set the iframe source URL with query parameters
-  (function() {
-    const currentUrl = window.location.href; // Get the current page URL
-    const baseUrl = `${currentUrl.protocol}//${currentUrl.host}${currentUrl.pathname}`; // Construct the base URL without query parameters
-    const params = new URLSearchParams(window.location.search); // Get existing query parameters
+  
+    <iframe 
+    id="myIframe" 
+    title="Test UTM Source" 
+    loading="lazy" 
+    style="width: 100vw; height: 100vh; border: none;">
+  </iframe>
 
-    // Add or update the 'currentPageUrl' parameter
-    params.set('currentPageUrl', encodeURIComponent(baseUrl));
-    
-    // Construct the new iframe source URL
-    const iframeSrc = `https://html-engine-dev1.dynamicyield.com/ap/M4XgHA7GCcYCwGYDcBjEBGADBArOuAbEgC4bZ5w5A/Untitled-landing-pages?${params.toString()}`;
-    
-    // Set the src attribute of the iframe
-    document.getElementById('myIframe').src = iframeSrc;
-  })();
-</script>
-    </iframe>
+  <script>
+    // Function to set the iframe source URL with query parameters
+    function setIframeSrc() {
+      const currentUrl = window.location.href;                   // Get the current page URL
+      const baseUrl = `${location.protocol}//${location.host}${location.pathname}`; // Base URL without query parameters
+      const params = new URLSearchParams(window.location.search); // Get existing query parameters
+
+      // Add or update the 'currentPageUrl' parameter
+      params.set('currentPageUrl', encodeURIComponent(baseUrl));
+
+      // Construct the new iframe source URL
+      const iframeSrc = `https://html-engine-dev1.dynamicyield.com/ap/M4XgHA7GCcYCwGYDcBjEBGADBArOuAbEgC4bZ5w5A/Untitled-landing-pages?${params.toString()}`;
+
+      // Set the src attribute of the iframe
+      document.getElementById('myIframe').src = iframeSrc;
+    }
+    // Immediately invoke the function to set the iframe source
+    setIframeSrc();
+  </script>
+
   </body>
 </html>
