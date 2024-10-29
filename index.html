@@ -6,9 +6,8 @@
   </head>
   <body>
     
-    <iframe id="myIframe" title="test utm source" loading="lazy" style="width:100vw;height:100vh;border:none;"></iframe>
-
-<script>
+    <iframe id="myIframe" title="test utm source" loading="lazy" style="width:100vw;height:100vh;border:none;">
+      <script>
   // Immediately invoked function to set the iframe source URL with query parameters
   (function() {
     const currentUrl = window.location.href; // Get the current page URL
@@ -25,6 +24,6 @@
     document.getElementById('myIframe').src = iframeSrc;
   })();
 </script>
-
+    </iframe>
   </body>
 </html>
