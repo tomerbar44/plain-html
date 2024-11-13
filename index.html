@@ -6,32 +6,21 @@
   </head>
   <body>
   
-    <iframe 
-    id="myIframe" 
-    title="Test UTM Source" 
-    loading="lazy" 
-    style="width: 100vw; height: 100vh; border: none;">
-  </iframe>
+   <iframe id='ap-iframe' src="https://serving.global/ap/M4XgHA7GBMAsEE4DcBjEBGADBAzANk1iQBcNt9Mcg/Untitled-landing-pages" title="Untitled Acquisition Pages25_0" loading="lazy" style="width:100vw;height:100vh;border:none;"></iframe>
 
-  <script>
-    // Function to set the iframe source URL with query parameters
-    function setIframeSrc() {
-      const currentUrl = window.location.href;                   // Get the current page URL
-      const baseUrl = `${location.protocol}//${location.host}${location.pathname}`; // Base URL without query parameters
-      const params = new URLSearchParams(window.location.search); // Get existing query parameters
-
-      // Add or update the 'currentPageUrl' parameter
-      params.set('currentPageUrl', encodeURIComponent(baseUrl));
-
-      // Construct the new iframe source URL
-      const iframeSrc = `https://html-engine-dev1.dynamicyield.com/ap/M4XgHA7GCcYCwGYDcBjEBGADBArOuAbEgC4bZ5w5A/Untitled-landing-pages?${params.toString()}`;
-
-      // Set the src attribute of the iframe
-      document.getElementById('myIframe').src = iframeSrc;
-    }
-    // Immediately invoke the function to set the iframe source
-    setIframeSrc();
-  </script>
+      <!-- Script is used for URL parameters targeting -->
+      <script>
+        function setIframeSrc() {
+          const currentUrl = window.location.href;
+          const baseUrl = location.protocol + '//' + location.host + location.pathname;
+          const params = new URLSearchParams(window.location.search);
+          params.set('currentPageUrl', encodeURIComponent(baseUrl));
+          const iframeSrc = 'https://serving.global/ap/M4XgHA7GBMAsEE4DcBjEBGADBAzANk1iQBcNt9Mcg/Untitled-landing-pages?' + params.toString();
+          document.getElementById('ap-iframe').src = iframeSrc;
+        }
+        setIframeSrc();
+      </script>
+      <!-- End of script -->
 
   </body>
 </html>
